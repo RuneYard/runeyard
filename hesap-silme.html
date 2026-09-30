@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Delete Your Account · Rune Yard</title><style>
+:root{--bg:#0c0a07;--kart:#1a1710;--altin:#d4af37;--yazi:#e9e4d6;--soluk:#a39c88}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--yazi);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.kap{max-width:760px;margin:0 auto;padding:24px 18px 60px}
+header{text-align:center;padding:28px 0 8px}
+.logo{color:var(--altin);font-weight:700;letter-spacing:6px;font-size:22px}
+h1{color:var(--altin);font-size:26px;margin:.6em 0 .2em}
+h2{color:var(--altin);font-size:19px;margin:1.8em 0 .4em;border-bottom:1px solid #3a331d;padding-bottom:.25em}
+p,li{color:var(--yazi)} .soluk{color:var(--soluk);font-size:14px}
+ul{padding-left:1.2em} li{margin:.25em 0}
+a{color:var(--altin)}
+.dil{display:flex;gap:8px;justify-content:center;margin:14px 0}
+.dil button{background:var(--kart);color:var(--yazi);border:1px solid #4a4020;border-radius:8px;padding:8px 16px;cursor:pointer;font-size:15px}
+.dil button.aktif{background:var(--altin);color:#000;font-weight:700}
+.kutu{background:var(--kart);border:1px solid #3a331d;border-radius:10px;padding:14px 16px;margin:14px 0}
+nav{text-align:center;margin:10px 0 0;font-size:15px} nav a{margin:0 10px}
+[lang]{display:none} body.tr [lang=tr]{display:block} body.en [lang=en]{display:block}
+</style></head>
+<body class="tr"><div class="kap">
+<header><div class="logo">RUNE YARD</div></header>
+<div class="dil"><button data-d="tr">Türkçe</button><button data-d="en">English</button></div>
+<nav><a href="gizlilik.html">Gizlilik / Privacy</a><a href="sartlar.html">Şartlar / Terms</a><a href="hesap-silme.html">Hesap silme / Delete account</a></nav>
+<div lang="tr"><h1>Hesap Silme</h1><p class="soluk">Son güncelleme: 30 Eylül 2026</p>
+<p>Rune Yard hesabınızı ve ilişkili verilerinizi silmek için aşağıdaki yollardan birini kullanabilirsiniz.</p>
+<h2>Uygulama içinden (önerilen)</h2>
+<ol>
+<li>Uygulamayı açın ve <b>Profil</b> sekmesine gidin.</li>
+<li><b>Abonelikten Çık</b> düğmesine dokunun.</li>
+<li>E-posta hesabı için şifrenizi girin; Google/Apple hesabı için ilgili hesapla yeniden giriş yapın ve onaylayın.</li>
+</ol>
+<p>Bu işlem hesabınızı ve bulutta saklanan profilinizi (ad, doğum tarihi, e-posta ve ilişkili kayıtlar) kalıcı olarak siler. Cihazdaki yerel veriler, uygulamayı kaldırdığınızda silinir.</p>
+<h2>E-posta ile</h2>
+<p>Uygulamaya erişemiyorsanız, hesabınızda kayıtlı e-posta adresinizden <a href="mailto:runeyard@gmail.com?subject=Hesap%20silme%20talebi">runeyard@gmail.com</a> adresine "Hesap silme talebi" konulu bir e-posta gönderin. Talebinizi makul bir süre içinde (en geç 30 gün) işleme alırız.</p>
+<h2>Önemli</h2>
+<ul>
+<li>Silme işlemi geri alınamaz.</li>
+<li><b>VIP aboneliği</b> hesabı silmekle iptal olmaz; Google Play veya App Store'dan ayrıca iptal edin.</li>
+<li>Mağazaların tuttuğu ödeme kayıtları, kendi politikalarına göre saklanabilir.</li>
+</ul></div>
+<div lang="en"><h1>Delete Your Account</h1><p class="soluk">Last updated: 30 September 2026</p>
+<p>You can delete your Rune Yard account and the associated data in either of the following ways.</p>
+<h2>In the App (recommended)</h2>
+<ol>
+<li>Open the App and go to the <b>Profile</b> tab.</li>
+<li>Tap <b>"Abonelikten Çık"</b> (Delete account).</li>
+<li>For an e-mail account, enter your password; for a Google/Apple account, sign in again with that account and confirm.</li>
+</ol>
+<p>This permanently deletes your account and your cloud-stored profile (name, date of birth, e-mail and related records). Local data on your device is removed when you uninstall the App.</p>
+<h2>By e-mail</h2>
+<p>If you cannot access the App, send an e-mail titled "Account deletion request" from the address registered to your account to <a href="mailto:runeyard@gmail.com?subject=Account%20deletion%20request">runeyard@gmail.com</a>. We will process your request within a reasonable time (at most 30 days).</p>
+<h2>Important</h2>
+<ul>
+<li>Deletion cannot be undone.</li>
+<li>Your <b>VIP subscription</b> is not cancelled by deleting your account; cancel it separately in Google Play or the App Store.</li>
+<li>Payment records kept by the stores may be retained under their own policies.</li>
+</ul></div>
+</div><script>
+(function(){
+  var h=(location.hash||"").replace("#","");
+  var d=(h==="en"||h==="tr")?h:((navigator.language||"tr").toLowerCase().indexOf("tr")===0?"tr":"en");
+  function ayarla(x){document.body.className=x;document.documentElement.lang=x;
+    var b=document.querySelectorAll(".dil button");for(var i=0;i<b.length;i++){b[i].className=(b[i].getAttribute("data-d")===x)?"aktif":"";}
+    try{history.replaceState(null,"","#"+x);}catch(e){}}
+  var b=document.querySelectorAll(".dil button");
+  for(var i=0;i<b.length;i++){b[i].onclick=function(){ayarla(this.getAttribute("data-d"));};}
+  ayarla(d);
+})();
+</script></body></html>

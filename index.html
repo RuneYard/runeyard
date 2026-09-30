@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rune Yard · Rune Yard</title><style>
+:root{--bg:#0c0a07;--kart:#1a1710;--altin:#d4af37;--yazi:#e9e4d6;--soluk:#a39c88}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--yazi);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.kap{max-width:760px;margin:0 auto;padding:24px 18px 60px}
+header{text-align:center;padding:28px 0 8px}
+.logo{color:var(--altin);font-weight:700;letter-spacing:6px;font-size:22px}
+h1{color:var(--altin);font-size:26px;margin:.6em 0 .2em}
+h2{color:var(--altin);font-size:19px;margin:1.8em 0 .4em;border-bottom:1px solid #3a331d;padding-bottom:.25em}
+p,li{color:var(--yazi)} .soluk{color:var(--soluk);font-size:14px}
+ul{padding-left:1.2em} li{margin:.25em 0}
+a{color:var(--altin)}
+.dil{display:flex;gap:8px;justify-content:center;margin:14px 0}
+.dil button{background:var(--kart);color:var(--yazi);border:1px solid #4a4020;border-radius:8px;padding:8px 16px;cursor:pointer;font-size:15px}
+.dil button.aktif{background:var(--altin);color:#000;font-weight:700}
+.kutu{background:var(--kart);border:1px solid #3a331d;border-radius:10px;padding:14px 16px;margin:14px 0}
+nav{text-align:center;margin:10px 0 0;font-size:15px} nav a{margin:0 10px}
+[lang]{display:none} body.tr [lang=tr]{display:block} body.en [lang=en]{display:block}
+</style></head>
+<body class="tr"><div class="kap">
+<header><div class="logo">RUNE YARD</div></header>
+<div class="dil"><button data-d="tr">Türkçe</button><button data-d="en">English</button></div>
+<nav><a href="gizlilik.html">Gizlilik / Privacy</a><a href="sartlar.html">Şartlar / Terms</a><a href="hesap-silme.html">Hesap silme / Delete account</a></nav>
+<div lang="tr"><h1>Rune Yard</h1><p>Rünlerin kadim bilgeliğiyle günlük rehberlik.</p><div class="kutu"><a href="gizlilik.html#tr">Gizlilik Politikası</a><br><a href="sartlar.html#tr">Kullanım Şartları</a><br><a href="hesap-silme.html#tr">Hesap Silme</a></div></div>
+<div lang="en"><h1>Rune Yard</h1><p>Daily guidance with the ancient wisdom of the runes.</p><div class="kutu"><a href="gizlilik.html#en">Privacy Policy</a><br><a href="sartlar.html#en">Terms of Use</a><br><a href="hesap-silme.html#en">Delete Account</a></div></div>
+</div><script>
+(function(){
+  var h=(location.hash||"").replace("#","");
+  var d=(h==="en"||h==="tr")?h:((navigator.language||"tr").toLowerCase().indexOf("tr")===0?"tr":"en");
+  function ayarla(x){document.body.className=x;document.documentElement.lang=x;
+    var b=document.querySelectorAll(".dil button");for(var i=0;i<b.length;i++){b[i].className=(b[i].getAttribute("data-d")===x)?"aktif":"";}
+    try{history.replaceState(null,"","#"+x);}catch(e){}}
+  var b=document.querySelectorAll(".dil button");
+  for(var i=0;i<b.length;i++){b[i].onclick=function(){ayarla(this.getAttribute("data-d"));};}
+  ayarla(d);
+})();
+</script></body></html>
