@@ -4,33 +4,40 @@
 :root{--bg:#0c0a07;--kart:#1a1710;--altin:#d4af37;--yazi:#e9e4d6;--soluk:#a39c88}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--yazi);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-.kap{max-width:760px;margin:0 auto;padding:24px 18px 60px}
-header{text-align:center;padding:28px 0 8px}
-.logo{color:var(--altin);font-weight:700;letter-spacing:6px;font-size:22px}
+.kap{max-width:780px;margin:0 auto;padding:24px 18px 60px}
+header{text-align:center;padding:24px 0 8px}
+.logo{color:var(--altin);font-weight:700;letter-spacing:6px;font-size:22px;text-decoration:none}
 h1{color:var(--altin);font-size:26px;margin:.6em 0 .2em}
 h2{color:var(--altin);font-size:19px;margin:1.8em 0 .4em;border-bottom:1px solid #3a331d;padding-bottom:.25em}
 p,li{color:var(--yazi)} .soluk{color:var(--soluk);font-size:14px}
-ul{padding-left:1.2em} li{margin:.25em 0}
+ul,ol{padding-left:1.3em} li{margin:.3em 0}
 a{color:var(--altin)}
-.dil{display:flex;gap:8px;justify-content:center;margin:14px 0}
-.dil button{background:var(--kart);color:var(--yazi);border:1px solid #4a4020;border-radius:8px;padding:8px 16px;cursor:pointer;font-size:15px}
+.dil{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:14px 0}
+.dil button{background:var(--kart);color:var(--yazi);border:1px solid #4a4020;border-radius:8px;padding:6px 12px;cursor:pointer;font-size:14px;transition:all .15s}
 .dil button.aktif{background:var(--altin);color:#000;font-weight:700}
 .kutu{background:var(--kart);border:1px solid #3a331d;border-radius:10px;padding:14px 16px;margin:14px 0}
-nav{text-align:center;margin:10px 0 0;font-size:15px} nav a{margin:0 10px}
-div[lang]{display:none} body.tr div[lang=tr]{display:block} body.en div[lang=en]{display:block}
+nav{text-align:center;margin:12px 0 18px;font-size:15px;display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+div[lang]{display:none}
+body.tr div[lang=tr],body.en div[lang=en],body.sv div[lang=sv],body.de div[lang=de],body.es div[lang=es],body.no div[lang=no],body.fr div[lang=fr],body.pt div[lang=pt],body.ja div[lang=ja],body.ko div[lang=ko]{display:block}
 </style></head>
 <body class="tr"><div class="kap">
-<header><div class="logo">RUNE YARD</div></header>
-<div class="dil"><button data-d="tr">Türkçe</button><button data-d="en">English</button></div>
-<nav><a href="gizlilik.html">Gizlilik / Privacy</a><a href="sartlar.html">Şartlar / Terms</a><a href="hesap-silme.html">Hesap silme / Delete account</a></nav>
-<div lang="tr"><h1>Gizlilik Politikası</h1><p class="soluk">Son güncelleme: 30 Eylül 2026</p>
+<header><a class="logo" href="index.html" id="nav-home">RUNE YARD</a></header>
+<div class="dil">
+<button data-d="tr">Türkçe</button><button data-d="en">English</button><button data-d="sv">Svenska</button><button data-d="de">Deutsch</button><button data-d="es">Español</button><button data-d="no">Norsk</button><button data-d="fr">Français</button><button data-d="pt">Português</button><button data-d="ja">日本語</button><button data-d="ko">한국어</button>
+</div>
+<nav>
+  <a href="gizlilik.html" id="nav-priv">Gizlilik / Privacy</a>
+  <a href="sartlar.html" id="nav-terms">Şartlar / Terms (EULA)</a>
+  <a href="hesap-silme.html" id="nav-del">Hesap silme / Delete account</a>
+</nav>
+<div lang="tr"><h1>Gizlilik Politikası</h1><p class="soluk">Son güncelleme: 2 Kasım 2026</p>
 <p>Bu politika, <b>Rune Yard</b> mobil uygulamasını ("Uygulama") kullandığınızda hangi kişisel verilerin işlendiğini, neden işlendiğini ve haklarınızı açıklar. Veri sorumlusu: <b>Mehmet Akdeniz</b> (iletişim: <a href="mailto:runeyard@gmail.com">runeyard@gmail.com</a>).</p>
 
 <h2>1. Hangi verileri topluyoruz?</h2>
 <ul>
 <li><b>Hesap bilgileri:</b> E-posta adresi ve şifre (şifre Firebase Authentication tarafından saklanır, bize görünmez) veya Google / Apple ile giriş yaptığınızda bu sağlayıcıların verdiği hesap kimliği ve e-posta adresi.</li>
 <li><b>Profil bilgileri (isteğe bağlı):</b> Adınız (veya takma adınız) ve doğum tarihiniz. Kişiselleştirilmiş rün yorumları için kullanılır.</li>
-<li><b>Yazdığınız içerik:</b> Rün okumaları için girdiğiniz niyet/soru metinleri.</li>
+<li><b>Yazdığınız içerik:</b> Rün okumaları, isim analizi ve rün bağlama için girdiğiniz niyet/soru ve isim metinleri.</li>
 <li><b>Kullanım verileri (cihazınızda):</b> Kalan jeton sayısı, geçmiş okumalarınız (arşiv), ayarlarınız, VIP durumu.</li>
 <li><b>Reklam ve cihaz verileri:</b> Ödüllü reklam izlediğinizde Google AdMob; reklam kimliği, IP adresi, cihaz ve uygulama bilgisi gibi verileri işleyebilir.</li>
 <li><b>Satın alma bilgileri:</b> VIP aboneliği Google Play veya Apple App Store üzerinden alınır. Ödeme ve kart bilgilerinize erişmeyiz; yalnızca aboneliğin durumunu (aktif/değil) öğreniriz.</li>
@@ -39,7 +46,7 @@ div[lang]{display:none} body.tr div[lang=tr]{display:block} body.en div[lang=en]
 <h2>2. Verileri neden kullanıyoruz?</h2>
 <ul>
 <li>Üyelik, giriş ve profilinizi cihazlar arasında eşitlemek için,</li>
-<li>Rün okumalarını ve yorumlarını oluşturmak için,</li>
+<li>Rün okumalarını, isim analizini ve yorumlarını oluşturmak için,</li>
 <li>Jeton, reklam ve VIP abonelik sistemini işletmek için,</li>
 <li>Uygulamanın güvenliğini sağlamak ve hataları gidermek için,</li>
 <li>Yasal yükümlülüklerimizi yerine getirmek için.</li>
@@ -54,7 +61,7 @@ div[lang]{display:none} body.tr div[lang=tr]{display:block} body.en div[lang=en]
 <ul>
 <li><b>Google Firebase</b> (kimlik doğrulama ve Firestore veritabanı),</li>
 <li><b>Google AdMob</b> (ödüllü reklamlar),</li>
-<li><b>Google Play / Apple App Store</b> (abonelik ve ödeme),</li>
+<li><b>Google Play / Apple App Store &amp; RevenueCat</b> (abonelik ve ödeme doğrulaması),</li>
 <li><b>Groq ve Google Gemini</b> (yapay zekâ yorumları).</li>
 </ul>
 <p>Bu sağlayıcılar verileri kendi gizlilik politikalarına göre işler ve verileriniz Türkiye veya Avrupa Ekonomik Alanı dışındaki ülkelerde (örn. ABD) işlenebilir. Yasal bir zorunluluk olduğunda yetkili makamlarla paylaşım yapılabilir.</p>
@@ -80,14 +87,15 @@ div[lang]{display:none} body.tr div[lang=tr]{display:block} body.en div[lang=en]
 <h2>11. Yayın ve değişiklikler</h2>
 <p>Bu politikayı zaman zaman güncelleyebiliriz. Önemli değişiklikler için Uygulama içinde veya bu sayfada duyuru yapılır. Sorularınız için: <a href="mailto:runeyard@gmail.com">runeyard@gmail.com</a>.</p>
 <div class="kutu soluk">Rün okumaları eğlence ve kişisel düşünme amaçlıdır; tıbbi, hukuki veya finansal tavsiye değildir.</div></div>
-<div lang="en"><h1>Privacy Policy</h1><p class="soluk">Last updated: 30 September 2026</p>
+
+<div lang="en"><h1>Privacy Policy</h1><p class="soluk">Last updated: 2 November 2026</p>
 <p>This policy explains what personal data is processed when you use the <b>Rune Yard</b> mobile app (the "App"), why, and what your rights are. Data controller: <b>Mehmet Akdeniz</b> (contact: <a href="mailto:runeyard@gmail.com">runeyard@gmail.com</a>).</p>
 
 <h2>1. What data do we collect?</h2>
 <ul>
 <li><b>Account data:</b> your e-mail address and password (the password is stored by Firebase Authentication and is not visible to us), or, if you sign in with Google / Apple, the account identifier and e-mail address provided by that provider.</li>
 <li><b>Profile data (optional):</b> your name (or nickname) and date of birth, used to personalise rune readings.</li>
-<li><b>Content you write:</b> the intention/question text you enter for readings.</li>
+<li><b>Content you write:</b> the intention/question and name text you enter for readings, name analysis, and bindrunes.</li>
 <li><b>Usage data (on your device):</b> remaining tokens, your reading history (archive), settings and VIP status.</li>
 <li><b>Advertising and device data:</b> when you watch a rewarded ad, Google AdMob may process data such as advertising ID, IP address, and device and app information.</li>
 <li><b>Purchase information:</b> the VIP subscription is bought through Google Play or the Apple App Store. We do not have access to your payment or card details; we only learn whether the subscription is active.</li>
@@ -96,7 +104,7 @@ div[lang]{display:none} body.tr div[lang=tr]{display:block} body.en div[lang=en]
 <h2>2. Why do we use your data?</h2>
 <ul>
 <li>To provide sign-up, sign-in and sync your profile across devices,</li>
-<li>To create rune readings and interpretations,</li>
+<li>To create rune readings, name analyses and interpretations,</li>
 <li>To run the token, ad and VIP subscription system,</li>
 <li>To keep the App secure and fix errors,</li>
 <li>To comply with legal obligations.</li>
@@ -111,7 +119,7 @@ div[lang]{display:none} body.tr div[lang=tr]{display:block} body.en div[lang=en]
 <ul>
 <li><b>Google Firebase</b> (authentication and Firestore database),</li>
 <li><b>Google AdMob</b> (rewarded ads),</li>
-<li><b>Google Play / Apple App Store</b> (subscriptions and payments),</li>
+<li><b>Google Play / Apple App Store &amp; RevenueCat</b> (subscriptions and payment verification),</li>
 <li><b>Groq and Google Gemini</b> (AI readings).</li>
 </ul>
 <p>These providers process data under their own privacy policies, and your data may be processed in countries outside Turkey or the European Economic Area (e.g. the USA). We may disclose data to authorities where legally required.</p>
@@ -126,7 +134,7 @@ div[lang]{display:none} body.tr div[lang=tr]{display:block} body.en div[lang=en]
 <p>Under Turkish KVKK (Law No. 6698) and, if you are in Europe, the GDPR, you have the right to access, correct, delete, object to, restrict the processing of, and port your data, and to withdraw consent at any time. Write to <a href="mailto:runeyard@gmail.com">runeyard@gmail.com</a> to exercise these rights. You may also complain to your local data protection authority.</p>
 
 <h2>8. Deleting your account</h2>
-<p>In the App, use <b>Profile → Delete account ("Abonelikten Çık")</b> to delete your account and your cloud-stored profile. See the <a href="hesap-silme.html#en">Delete account</a> page for details. A VIP subscription must be cancelled separately in the store; deleting your account does not cancel it automatically.</p>
+<p>In the App, use <b>Profile → Delete account</b> to delete your account and your cloud-stored profile. See the <a href="hesap-silme.html#en">Delete account</a> page for details. A VIP subscription must be cancelled separately in the store; deleting your account does not cancel it automatically.</p>
 
 <h2>9. Children</h2>
 <p>The App is <b>not directed to anyone under 16</b> and we do not knowingly collect their data. If you notice that a child has provided data, write to us and we will delete it.</p>
@@ -137,15 +145,446 @@ div[lang]{display:none} body.tr div[lang=tr]{display:block} body.en div[lang=en]
 <h2>11. Changes and contact</h2>
 <p>We may update this policy from time to time and will announce important changes in the App or on this page. Questions: <a href="mailto:runeyard@gmail.com">runeyard@gmail.com</a>.</p>
 <div class="kutu soluk">Rune readings are for entertainment and personal reflection only; they are not medical, legal or financial advice.</div></div>
+
+<div lang="sv"><h1>Integritetspolicy</h1><p class="soluk">Senast uppdaterad: 2 november 2026</p>
+<p>Denna policy förklarar vilka personuppgifter som behandlas när du använder mobilappen <b>Rune Yard</b> ("Appen"), varför de behandlas och vilka rättigheter du har. Personuppgiftsansvarig: <b>Mehmet Akdeniz</b> (kontakt: <a href="mailto:runeyard@gmail.com">runeyard@gmail.com</a>).</p>
+
+<h2>1. Vilka uppgifter samlar vi in?</h2>
+<ul>
+<li><b>Kontouppgifter:</b> din e-postadress och ditt lösenord (lösenordet lagras av Firebase Authentication och är inte synligt för oss), eller konto-ID och e-postadress från Google / Apple vid inloggning med dessa tjänster.</li>
+<li><b>Profiluppgifter (valfritt):</b> ditt namn (eller smeknamn) och födelsedatum för att anpassa runtolkningar.</li>
+<li><b>Innehåll du skriver:</b> den intention/fråga och de namn du anger för runläsningar, namnanalys och bindrunor.</li>
+<li><b>Användningsdata (på din enhet):</b> återstående polletter, läshistorik (arkiv), inställningar och VIP-status.</li>
+<li><b>Annons- och enhetsdata:</b> när du tittar på en belöningsannons kan Google AdMob behandla annons-ID, IP-adress samt enhets- och appinformation.</li>
+<li><b>Köpinformation:</b> VIP-prenumerationer köps via Google Play eller Apple App Store. Vi har inte tillgång till dina kort- eller betalningsuppgifter, utan ser endast om prenumerationen är aktiv.</li>
+</ul>
+
+<h2>2. Varför använder vi dina uppgifter?</h2>
+<ul>
+<li>För att tillhandahålla registrering, inloggning och synkronisering av din profil mellan enheter,</li>
+<li>För att skapa runläsningar, namnanalyser och tolkningar,</li>
+<li>För att driva pollett-, annons- och VIP-prenumerationssystemet,</li>
+<li>För att hålla Appen säker och åtgärda fel,</li>
+<li>För att uppfylla rättsliga skyldigheter.</li>
+</ul>
+<p>Rättslig grund är fullgörande av avtal (tillhandahålla tjänsten), ditt samtycke (profil- och annonsval) samt berättigat intresse (säkerhet och drift).</p>
+
+<h2>3. Användning av artificiell intelligens</h2>
+<p>Tolkningar skapas med AI-tjänster. Ditt namn, födelsedatum och din intentionstext kan skickas till <b>Groq</b> och/eller <b>Google Gemini</b> uteslutande för att generera läsningen. Ange inte känsliga uppgifter (t.ex. hälsa eller ekonomi) eller andras personuppgifter i intentionstexten.</p>
+
+<h2>4. Vilka delar vi uppgifter med?</h2>
+<p>Vi säljer inte dina uppgifter. För att leverera tjänsten använder vi följande leverantörer:</p>
+<ul>
+<li><b>Google Firebase</b> (autentisering och Firestore-databas),</li>
+<li><b>Google AdMob</b> (belöningsannonser),</li>
+<li><b>Google Play / Apple App Store &amp; RevenueCat</b> (prenumerationer och betalningsverifiering),</li>
+<li><b>Groq och Google Gemini</b> (AI-tolkningar).</li>
+</ul>
+<p>Dessa leverantörer behandlar uppgifter enligt sina egna integritetspolicyer och data kan behandlas utanför EES (t.ex. i USA). Uppgifter kan lämnas ut till myndigheter om lagen kräver det.</p>
+
+<h2>5. Annonser och samtycke</h2>
+<p>Appen använder Google AdMob för belöningsannonser. Inom EES och Storbritannien visas en samtyckesruta vid första starten; du kan ändra ditt val när som helst. På iOS kan spårningstillstånd begäras. Du kan även begränsa annonsanpassning i enhetens inställningar.</p>
+
+<h2>6. Lagringstid</h2>
+<p>Konto- och profiluppgifter sparas tills du raderar ditt konto. När du raderar kontot tas profilen bort permanent. Lokal data på enheten raderas när du avinstallerar Appen. Betalningsposter hos appbutikerna sparas enligt deras egna regler.</p>
+
+<h2>7. Dina rättigheter</h2>
+<p>Enligt GDPR och tillämplig dataskyddslagstiftning har du rätt att få tillgång till, rätta, radera, begränsa eller invända mot behandlingen av dina uppgifter samt rätt till dataportabilitet och att återkalla samtycke. Kontakta <a href="mailto:runeyard@gmail.com">runeyard@gmail.com</a> för att utöva dina rättigheter.</p>
+
+<h2>8. Radera ditt konto</h2>
+<p>I Appen kan du välja <b>Profil → Radera konto</b> för att ta bort ditt konto och din molnlagrade profil. Se sidan <a href="hesap-silme.html#sv">Radera konto</a> för mer information. En VIP-prenumeration måste sägas upp separat i butiken.</p>
+
+<h2>9. Barn</h2>
+<p>Appen riktar sig <b>inte till personer under 16 år</b> och vi samlar inte medvetet in uppgifter från dem.</p>
+
+<h2>10. Säkerhet &amp; kontakt</h2>
+<p>Vi vidtar rimliga tekniska och organisatoriska skyddsåtgärder. Vi kan uppdatera denna policy vid behov. Frågor: <a href="mailto:runeyard@gmail.com">runeyard@gmail.com</a>.</p>
+<div class="kutu soluk">Runläsningar är endast avsedda för underhållning och personlig reflektion; de utgör inte medicinsk, juridisk eller ekonomisk rådgivning.</div></div>
+
+<div lang="de"><h1>Datenschutzerklärung</h1><p class="soluk">Zuletzt aktualisiert: 2. November 2026</p>
+<p>Diese Datenschutzerklärung erläutert, welche personenbezogenen Daten bei der Nutzung der mobilen App <b>Rune Yard</b> (die „App") verarbeitet werden, zu welchem Zweck dies geschieht und welche Rechte Sie haben. Verantwortlicher: <b>Mehmet Akdeniz</b> (Kontakt: <a href="mailto:runeyard@gmail.com">runeyard@gmail.com</a>).</p>
+
+<h2>1. Welche Daten erheben wir?</h2>
+<ul>
+<li><b>Kontodaten:</b> E-Mail-Adresse und Passwort (das Passwort wird von Firebase Authentication gespeichert und ist für uns nicht einsehbar) oder bei Anmeldung über Google / Apple die von diesen Anbietern übermittelte Konto-ID und E-Mail-Adresse.</li>
+<li><b>Profildaten (optional):</b> Ihr Name (oder Spitzname) und Geburtsdatum zur Personalisierung von Runenlegungen.</li>
+<li><b>Von Ihnen eingegebene Inhalte:</b> Ihre Absicht/Frage sowie Namen für Runenlegungen, Namensanalysen und Binderunen.</li>
+<li><b>Nutzungsdaten (auf Ihrem Gerät):</b> verbleibende Token, Leseverlauf (Archiv), Einstellungen und VIP-Status.</li>
+<li><b>Werbe- und Gerätedaten:</b> Beim Ansehen von Belohnungswerbung kann Google AdMob Daten wie Werbe-ID, IP-Adresse sowie Geräte- und App-Informationen verarbeiten.</li>
+<li><b>Kaufinformationen:</b> Das VIP-Abonnement wird über Google Play oder den Apple App Store abgeschlossen. Wir erhalten keinen Zugriff auf Ihre Zahlungs- oder Kartendaten, sondern erfahren nur, ob das Abonnement aktiv ist.</li>
+</ul>
+
+<h2>2. Warum verwenden wir Ihre Daten?</h2>
+<ul>
+<li>Zur Registrierung, Anmeldung und Synchronisierung Ihres Profils über mehrere Geräte,</li>
+<li>Zur Erstellung von Runenlegungen, Namensanalysen und Deutungen,</li>
+<li>Zum Betrieb des Token-, Werbe- und VIP-Abonnementsystems,</li>
+<li>Zur Gewährleistung der Sicherheit der App und zur Fehlerbehebung,</li>
+<li>Zur Erfüllung gesetzlicher Pflichten.</li>
+</ul>
+<p>Rechtsgrundlagen sind die Vertragserfüllung (Bereitstellung des Dienstes), Ihre Einwilligung (Profil- und Werbeeinstellungen) sowie unsere berechtigten Interessen (Sicherheit und Betrieb).</p>
+
+<h2>3. Einsatz künstlicher Intelligenz</h2>
+<p>Runendeutungen werden mithilfe von KI-Diensten erstellt. Hierzu können Ihr Name, Ihr Geburtsdatum und Ihr Absichtstext an <b>Groq</b> und/oder <b>Google Gemini</b> übermittelt werden. Dies geschieht ausschließlich zur Erstellung der Deutung. Bitte geben Sie keine sensiblen Daten (z. B. Gesundheits- oder Finanzdaten) oder personenbezogene Daten Dritter ein.</p>
+
+<h2>4. Mit wem teilen wir Daten?</h2>
+<p>Wir verkaufen Ihre Daten nicht. Zur Bereitstellung des Dienstes nutzen wir folgende Anbieter:</p>
+<ul>
+<li><b>Google Firebase</b> (Authentifizierung und Firestore-Datenbank),</li>
+<li><b>Google AdMob</b> (Belohnungswerbung),</li>
+<li><b>Google Play / Apple App Store &amp; RevenueCat</b> (Abonnements und Zahlungsprüfung),</li>
+<li><b>Groq und Google Gemini</b> (KI-Deutungen).</li>
+</ul>
+<p>Diese Anbieter verarbeiten Daten gemäß ihren eigenen Datenschutzrichtlinien; Daten können auch außerhalb des EWR (z. B. in den USA) verarbeitet werden.</p>
+
+<h2>5. Werbung und Einwilligung</h2>
+<p>Die App nutzt Google AdMob für Belohnungswerbung. Im EWR und im Vereinigten Königreich wird beim ersten Start ein Einwilligungsdialog angezeigt. Unter iOS kann eine Tracking-Berechtigung angefragt werden. Sie können personalisierte Werbung auch in Ihren Geräteeinstellungen beschränken.</p>
+
+<h2>6. Speicherdauer</h2>
+<p>Konto- und Profildaten werden gespeichert, bis Sie Ihr Konto löschen. Lokale Daten auf Ihrem Gerät werden beim Deinstallieren der App gelöscht. Gesetzlich aufzubewahrende Zahlungsdaten verbleiben bei den App-Stores gemäß deren Richtlinien.</p>
+
+<h2>7. Ihre Rechte</h2>
+<p>Nach der DSGVO (GDPR) und dem türkischen Datenschutzgesetz KVKK haben Sie das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Widerspruch und Datenübertragbarkeit sowie auf Widerruf Ihrer Einwilligung. Schreiben Sie hierzu an <a href="mailto:runeyard@gmail.com">runeyard@gmail.com</a>.</p>
+
+<h2>8. Konto löschen</h2>
+<p>In der App können Sie unter <b>Profil → Konto löschen</b> Ihr Konto und Ihr in der Cloud gespeichertes Profil dauerhaft löschen. Details finden Sie auf der Seite <a href="hesap-silme.html#de">Konto löschen</a>. Ein VIP-Abonnement muss separat im jeweiligen Store gekündigt werden.</p>
+
+<h2>9. Kinder</h2>
+<p>Die App richtet sich <b>nicht an Personen unter 16 Jahren</b>, und wir erheben wissentlich keine Daten von Kindern.</p>
+
+<h2>10. Sicherheit &amp; Kontakt</h2>
+<p>Wir treffen angemessene technische und organisatorische Sicherheitsmaßnahmen. Fragen: <a href="mailto:runeyard@gmail.com">runeyard@gmail.com</a>.</p>
+<div class="kutu soluk">Runenlegungen dienen ausschließlich der Unterhaltung und persönlichen Reflexion; sie stellen keine medizinische, rechtliche oder finanzielle Beratung dar.</div></div>
+
+<div lang="es"><h1>Política de Privacidad</h1><p class="soluk">Última actualización: 2 de noviembre de 2026</p>
+<p>Esta política explica qué datos personales se procesan cuando utilizas la aplicación móvil <b>Rune Yard</b> (la «Aplicación»), por qué y cuáles son tus derechos. Responsable del tratamiento: <b>Mehmet Akdeniz</b> (contacto: <a href="mailto:runeyard@gmail.com">runeyard@gmail.com</a>).</p>
+
+<h2>1. ¿Qué datos recopilamos?</h2>
+<ul>
+<li><b>Datos de la cuenta:</b> tu dirección de correo electrónico y contraseña (almacenada por Firebase Authentication y no visible para nosotros), o el identificador de cuenta y correo proporcionados por Google / Apple al iniciar sesión.</li>
+<li><b>Datos de perfil (opcional):</b> tu nombre (o apodo) y fecha de nacimiento, utilizados para personalizar las lecturas de runas.</li>
+<li><b>Contenido que escribes:</b> la intención/pregunta y los nombres que introduces para lecturas, análisis de nombres y bindrunes.</li>
+<li><b>Datos de uso (en tu dispositivo):</b> fichas restantes, historial de lecturas (archivo), ajustes y estado VIP.</li>
+<li><b>Datos publicitarios y del dispositivo:</b> al ver un anuncio recompensado, Google AdMob puede procesar datos como el ID de publicidad, la dirección IP y datos del dispositivo.</li>
+<li><b>Información de compra:</b> la suscripción VIP se adquiere a través de Google Play o Apple App Store. No tenemos acceso a tus datos bancarios o de tarjeta; solo sabemos si la suscripción está activa.</li>
+</ul>
+
+<h2>2. ¿Por qué utilizamos tus datos?</h2>
+<ul>
+<li>Para gestionar el registro, inicio de sesión y sincronización de tu perfil entre dispositivos,</li>
+<li>Para generar lecturas de runas, análisis de nombres e interpretaciones,</li>
+<li>Para operar el sistema de fichas, anuncios y suscripción VIP,</li>
+<li>Para mantener la seguridad de la Aplicación y corregir errores,</li>
+<li>Para cumplir con obligaciones legales.</li>
+</ul>
+<p>Nuestras bases legales son la ejecución de un contrato, tu consentimiento y nuestros intereses legítimos (seguridad y funcionamiento del servicio).</p>
+
+<h2>3. Uso de inteligencia artificial</h2>
+<p>Las interpretaciones se generan mediante servicios de IA. Para ello, tu nombre, fecha de nacimiento y texto de intención pueden enviarse a <b>Groq</b> y/o <b>Google Gemini</b> únicamente para generar la lectura. No introduzcas información sensible (salud, finanzas) ni datos personales de terceros.</p>
+
+<h2>4. ¿Con quién compartimos los datos?</h2>
+<p>No vendemos tus datos. Utilizamos los siguientes proveedores de servicios:</p>
+<ul>
+<li><b>Google Firebase</b> (autenticación y base de datos Firestore),</li>
+<li><b>Google AdMob</b> (anuncios recompensados),</li>
+<li><b>Google Play / Apple App Store y RevenueCat</b> (suscripciones y verificación de pagos),</li>
+<li><b>Groq y Google Gemini</b> (interpretaciones con IA).</li>
+</ul>
+<p>Estos proveedores procesan los datos según sus propias políticas de privacidad y pueden procesarlos fuera del EEE (por ejemplo, en EE. UU.).</p>
+
+<h2>5. Anuncios y consentimiento</h2>
+<p>La Aplicación utiliza Google AdMob para mostrar anuncios recompensados. En el EEE y el Reino Unido se muestra un cuadro de consentimiento en el primer inicio. En iOS se puede solicitar permiso de rastreo. También puedes limitar la personalización de anuncios en los ajustes de tu dispositivo.</p>
+
+<h2>6. Conservación de datos</h2>
+<p>Los datos de tu cuenta y perfil se conservan hasta que elimines tu cuenta. Los datos locales de tu dispositivo se eliminan al desinstalar la Aplicación.</p>
+
+<h2>7. Tus derechos</h2>
+<p>Bajo el RGPD (GDPR) y la ley KVKK, tienes derecho a acceder, rectificar, eliminar, oponerte, limitar el tratamiento y portar tus datos, así como a retirar tu consentimiento en cualquier momento escribiendo a <a href="mailto:runeyard@gmail.com">runeyard@gmail.com</a>.</p>
+
+<h2>8. Eliminar tu cuenta</h2>
+<p>En la Aplicación, ve a <b>Perfil → Eliminar cuenta</b> para borrar permanentemente tu cuenta y perfil en la nube. Consulta la página <a href="hesap-silme.html#es">Eliminar cuenta</a> para más detalles. La suscripción VIP debe cancelarse por separado en la tienda.</p>
+
+<h2>9. Menores</h2>
+<p>La Aplicación <b>no está dirigida a menores de 16 años</b> y no recopilamos conscientemente sus datos.</p>
+
+<h2>10. Seguridad y contacto</h2>
+<p>Tomamos medidas técnicas y organizativas razonables para proteger tus datos. Contacto: <a href="mailto:runeyard@gmail.com">runeyard@gmail.com</a>.</p>
+<div class="kutu soluk">Las lecturas de runas son únicamente para entretenimiento y reflexión personal; no constituyen asesoramiento médico, legal ni financiero.</div></div>
+
+<div lang="no"><h1>Personvernerklæring</h1><p class="soluk">Sist oppdatert: 2. november 2026</p>
+<p>Denne erklæringen forklarer hvilke personopplysninger som behandles når du bruker mobilappen <b>Rune Yard</b> («Appen»), hvorfor de behandles og hvilke rettigheter du har. Behandlingsansvarlig: <b>Mehmet Akdeniz</b> (kontakt: <a href="mailto:runeyard@gmail.com">runeyard@gmail.com</a>).</p>
+
+<h2>1. Hvilke opplysninger samler vi inn?</h2>
+<ul>
+<li><b>Kontoopplysninger:</b> e-postadresse og passord (passordet lagres av Firebase Authentication og er ikke synlig for oss), eller konto-ID og e-postadresse fra Google / Apple ved innlogging.</li>
+<li><b>Profilopplysninger (valgfritt):</b> navn (eller kallenavn) og fødselsdato for å tilpasse runelesninger.</li>
+<li><b>Innhold du skriver:</b> intensjonen/spørsmålet og navn du skriver inn for runelesninger, navneanalyse og bindruner.</li>
+<li><b>Bruksdata (på enheten din):</b> gjenværende poletter, lesehistorikk (arkiv), innstillinger og VIP-status.</li>
+<li><b>Annonse- og enhetsdata:</b> når du ser en belønningsannonse, kan Google AdMob behandle annonse-ID, IP-adresse samt enhets- og appinformasjon.</li>
+<li><b>Kjøpsinformasjon:</b> VIP-abonnement kjøpes via Google Play eller Apple App Store. Vi har ikke tilgang til betalings- eller kortopplysningene dine, men får kun vite om abonnementet er aktivt.</li>
+</ul>
+
+<h2>2. Hvorfor bruker vi opplysningene dine?</h2>
+<ul>
+<li>For å tilby registrering, innlogging og synkronisering av profilen din på tvers av enheter,</li>
+<li>For å lage runelesninger, navneanalyser og tolkninger,</li>
+<li>For å drifte polett-, annonse- og VIP-abonnementssystemet,</li>
+<li>For å holde Appen sikker og rette feil,</li>
+<li>For å oppfylle juridiske forpliktelser.</li>
+</ul>
+
+<h2>3. Bruk av kunstig intelligens</h2>
+<p>Tolkninger genereres med AI-tjenester. Navn, fødselsdato og intensjonstekst kan sendes til <b>Groq</b> og/eller <b>Google Gemini</b> kun for å generere lesningen. Ikke oppgi sensitiv informasjon (som helse- eller økonomiinfo) eller andres personopplysninger.</p>
+
+<h2>4. Hvem deler vi data med?</h2>
+<p>Vi selger ikke opplysningene dine. Vi bruker følgende tjenesteleverandører:</p>
+<ul>
+<li><b>Google Firebase</b> (autentisering og Firestore-database),</li>
+<li><b>Google AdMob</b> (belønningsannonser),</li>
+<li><b>Google Play / Apple App Store &amp; RevenueCat</b> (abonnementer og betalingsbekreftelse),</li>
+<li><b>Groq og Google Gemini</b> (AI-tolkninger).</li>
+</ul>
+
+<h2>5. Annonser og samtykke</h2>
+<p>Appen bruker Google AdMob for belønningsannonser. I EØS og Storbritannia vises et samtykkeskjema ved første oppstart. På iOS kan sporingstillatelse bli forespurt. Du kan også begrense annonsetilpasning i enhetsinnstillingene.</p>
+
+<h2>6. Lagringstid og dine rettigheter</h2>
+<p>Konto- og profildata lagres til du sletter kontoen din. I henhold til GDPR har du rett til innsyn, retting, sletting, begrensning, dataportabilitet og til å trekke tilbake samtykke. Kontakt oss på <a href="mailto:runeyard@gmail.com">runeyard@gmail.com</a>.</p>
+
+<h2>7. Slette kontoen din</h2>
+<p>I Appen kan du gå til <b>Profil → Slett konto</b> for å slette kontoen og skyprofilen din permanent. Se siden <a href="hesap-silme.html#no">Slett konto</a> for detaljer. VIP-abonnement må sies opp separat i appbutikken.</p>
+
+<h2>8. Barn &amp; Sikkerhet</h2>
+<p>Appen er <b>ikke rettet mot personer under 16 år</b>. Vi tar rimelige tekniske og organisatoriske forholdsregler for å beskytte data. Spørsmål: <a href="mailto:runeyard@gmail.com">runeyard@gmail.com</a>.</p>
+<div class="kutu soluk">Runelesninger er kun for underholdning og personlig refleksjon; de er ikke medisinske, juridiske eller økonomiske råd.</div></div>
+
+<div lang="fr"><h1>Politique de Confidentialité</h1><p class="soluk">Dernière mise à jour : 2 novembre 2026</p>
+<p>Cette politique explique quelles données personnelles sont traitées lorsque vous utilisez l'application mobile <b>Rune Yard</b> (l'« Application »), pourquoi et quels sont vos droits. Responsable du traitement : <b>Mehmet Akdeniz</b> (contact : <a href="mailto:runeyard@gmail.com">runeyard@gmail.com</a>).</p>
+
+<h2>1. Quelles données collectons-nous ?</h2>
+<ul>
+<li><b>Données de compte :</b> votre adresse e-mail et votre mot de passe (stocké par Firebase Authentication et invisible pour nous), ou l'identifiant de compte et l'adresse e-mail fournis par Google / Apple lors de la connexion.</li>
+<li><b>Données de profil (facultatif) :</b> votre nom (ou pseudonyme) et votre date de naissance, utilisés pour personnaliser les tirages de runes.</li>
+<li><b>Contenu que vous écrivez :</b> le texte d'intention/question et les noms saisis pour les tirages, l'analyse de nom et les runes liées (bindrunes).</li>
+<li><b>Données d'utilisation (sur votre appareil) :</b> jetons restants, historique des tirages (archives), paramètres et statut VIP.</li>
+<li><b>Données publicitaires et d'appareil :</b> lorsque vous regardez une publicité récompensée, Google AdMob peut traiter des données telles que l'identifiant publicitaire, l'adresse IP et les informations sur l'appareil.</li>
+<li><b>Informations d'achat :</b> l'abonnement VIP est souscrit via Google Play ou l'Apple App Store. Nous n'avons pas accès à vos coordonnées bancaires ; nous savons uniquement si l'abonnement est actif.</li>
+</ul>
+
+<h2>2. Pourquoi utilisons-nous vos données ?</h2>
+<ul>
+<li>Pour permettre l'inscription, la connexion et la synchronisation de votre profil entre appareils,</li>
+<li>Pour générer des tirages de runes, des analyses de noms et des interprétations,</li>
+<li>Pour faire fonctionner le système de jetons, de publicités et d'abonnement VIP,</li>
+<li>Pour assurer la sécurité de l'Application et corriger les erreurs,</li>
+<li>Pour respecter nos obligations légales.</li>
+</ul>
+
+<h2>3. Utilisation de l'intelligence artificielle</h2>
+<p>Les interprétations sont générées par des services d'IA. Votre nom, votre date de naissance et votre texte d'intention peuvent être envoyés à <b>Groq</b> et/ou <b>Google Gemini</b> uniquement pour produire le tirage. Veuillez ne pas saisir d'informations sensibles (santé, finances) ni de données personnelles de tiers.</p>
+
+<h2>4. Avec qui partageons-nous les données ?</h2>
+<p>Nous ne vendons pas vos données. Pour fournir le service, nous faisons appel aux prestataires suivants :</p>
+<ul>
+<li><b>Google Firebase</b> (authentification et base de données Firestore),</li>
+<li><b>Google AdMob</b> (publicités récompensées),</li>
+<li><b>Google Play / Apple App Store &amp; RevenueCat</b> (abonnements et vérification des paiements),</li>
+<li><b>Groq et Google Gemini</b> (interprétations par IA).</li>
+</ul>
+
+<h2>5. Publicités et consentement</h2>
+<p>L'Application utilise Google AdMob pour afficher des publicités récompensées. Dans l'EEE et au Royaume-Uni, un formulaire de consentement est affiché au premier lancement. Sur iOS, une autorisation de suivi peut être demandée. Vous pouvez également limiter la personnalisation des annonces dans les réglages de votre appareil.</p>
+
+<h2>6. Conservation et vos droits (RGPD)</h2>
+<p>Vos données de compte et de profil sont conservées jusqu'à la suppression de votre compte. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, de suppression, d'opposition, de limitation et de portabilité de vos données, ainsi que du droit de retirer votre consentement à tout moment en écrivant à <a href="mailto:runeyard@gmail.com">runeyard@gmail.com</a>.</p>
+
+<h2>7. Supprimer votre compte</h2>
+<p>Dans l'Application, utilisez <b>Profil → Supprimer le compte</b> pour supprimer définitivement votre compte et votre profil cloud. Consultez la page <a href="hesap-silme.html#fr">Supprimer le compte</a> pour plus de détails. Un abonnement VIP doit être résilié séparément dans le store.</p>
+
+<h2>8. Enfants &amp; Sécurité</h2>
+<p>L'Application <b>ne s'adresse pas aux personnes de moins de 16 ans</b>. Nous prenons des mesures techniques et organisationnelles raisonnables pour protéger vos données. Contact : <a href="mailto:runeyard@gmail.com">runeyard@gmail.com</a>.</p>
+<div class="kutu soluk">Les tirages de runes sont uniquement destinés au divertissement et à la réflexion personnelle ; ils ne constituent pas un avis médical, juridique ou financier.</div></div>
+
+<div lang="pt"><h1>Política de Privacidade</h1><p class="soluk">Última atualização: 2 de novembro de 2026</p>
+<p>Esta política explica quais dados pessoais são processados quando você usa o aplicativo móvel <b>Rune Yard</b> (o "Aplicativo"), por que e quais são os seus direitos. Controlador de dados: <b>Mehmet Akdeniz</b> (contato: <a href="mailto:runeyard@gmail.com">runeyard@gmail.com</a>).</p>
+
+<h2>1. Quais dados coletamos?</h2>
+<ul>
+<li><b>Dados da conta:</b> seu endereço de e-mail e senha (a senha é armazenada pelo Firebase Authentication e não é visível para nós) ou, se você entrar com Google / Apple, o identificador da conta e o e-mail fornecidos por esse provedor.</li>
+<li><b>Dados de perfil (opcional):</b> seu nome (ou apelido) e data de nascimento, usados para personalizar as leituras de runas.</li>
+<li><b>Conteúdo que você escreve:</b> o texto de intenção/pergunta e os nomes inseridos para leituras, análise de nome e bindrunes.</li>
+<li><b>Dados de uso (no seu dispositivo):</b> fichas restantes, histórico de leituras (arquivo), configurações e status VIP.</li>
+<li><b>Dados de publicidade e do dispositivo:</b> ao assistir a um anúncio premiado, o Google AdMob pode processar dados como ID de publicidade, endereço IP e informações do dispositivo.</li>
+<li><b>Informações de compra:</b> a assinatura VIP é adquirida pelo Google Play ou Apple App Store. Não temos acesso aos dados do seu cartão ou pagamento; apenas sabemos se a assinatura está ativa.</li>
+</ul>
+
+<h2>2. Por que usamos seus dados?</h2>
+<ul>
+<li>Para fornecer cadastro, login e sincronizar seu perfil entre dispositivos,</li>
+<li>Para criar leituras de runas, análises de nomes e interpretações,</li>
+<li>Para operar o sistema de fichas, anúncios e assinatura VIP,</li>
+<li>Para manter o Aplicativo seguro e corrigir erros,</li>
+<li>Para cumprir obrigações legais.</li>
+</ul>
+
+<h2>3. Uso de inteligência artificial</h2>
+<p>As leituras são geradas com serviços de IA. Para isso, seu nome, data de nascimento e texto de intenção podem ser enviados para <b>Groq</b> e/ou <b>Google Gemini</b> exclusivamente para gerar a leitura. Não insira informações sensíveis (como dados de saúde ou financeiros) ou dados pessoais de terceiros.</p>
+
+<h2>4. Com quem compartilhamos os dados?</h2>
+<p>Não vendemos seus dados. Para fornecer o serviço, usamos os seguintes provedores:</p>
+<ul>
+<li><b>Google Firebase</b> (autenticação e banco de dados Firestore),</li>
+<li><b>Google AdMob</b> (anúncios premiados),</li>
+<li><b>Google Play / Apple App Store &amp; RevenueCat</b> (assinaturas e verificação de pagamento),</li>
+<li><b>Groq e Google Gemini</b> (leituras por IA).</li>
+</ul>
+
+<h2>5. Anúncios e consentimento</h2>
+<p>O Aplicativo usa o Google AdMob para exibir anúncios premiados. No EEE, Reino Unido e regiões semelhantes, um aviso de consentimento é exibido no primeiro uso. No iOS, pode ser solicitada permissão de rastreamento. Você também pode limitar a personalização de anúncios nas configurações do dispositivo.</p>
+
+<h2>6. Retenção e seus direitos (GDPR / LGPD)</h2>
+<p>Seus dados de conta e perfil são mantidos até que você exclua sua conta. Você tem o direito de acessar, corrigir, excluir, opor-se, restringir o processamento e portar seus dados, bem como retirar o consentimento a qualquer momento escrevendo para <a href="mailto:runeyard@gmail.com">runeyard@gmail.com</a>.</p>
+
+<h2>7. Excluir sua conta</h2>
+<p>No Aplicativo, use <b>Perfil → Excluir conta</b> para remover permanentemente sua conta e perfil salvo na nuvem. Veja a página <a href="hesap-silme.html#pt">Excluir conta</a> para mais detalhes. A assinatura VIP deve ser cancelada separadamente na loja.</p>
+
+<h2>8. Crianças &amp; Segurança</h2>
+<p>O Aplicativo <b>não é direcionado a menores de 16 anos</b>. Tomamos medidas técnicas e organizacionais razoáveis para proteger os dados. Contato: <a href="mailto:runeyard@gmail.com">runeyard@gmail.com</a>.</p>
+<div class="kutu soluk">As leituras de runas são apenas para entretenimento e reflexão pessoal; não constituem aconselhamento médico, jurídico ou financeiro.</div></div>
+
+<div lang="ja"><h1>プライバシーポリシー</h1><p class="soluk">最終更新日：2026年11月2日</p>
+<p>本ポリシーは、モバイルアプリ<b>「Rune Yard」</b>（以下「本アプリ」）をご利用いただく際に処理される個人データの種類、利用目的、およびお客様の権利について説明します。データ管理者：<b>Mehmet Akdeniz</b>（連絡先：<a href="mailto:runeyard@gmail.com">runeyard@gmail.com</a>）。</p>
+
+<h2>1. 収集するデータ</h2>
+<ul>
+<li><b>アカウント情報：</b>メールアドレスとパスワード（パスワードはFirebase Authenticationによって安全に保管され、当方には表示されません）、またはGoogle / Appleでサインインした場合はそのプロバイダーから提供されるアカウントIDとメールアドレス。</li>
+<li><b>プロフィール情報（任意）：</b>パーソナライズされたルーン占いのために使用されるお名前（またはニックネーム）と生年月日。</li>
+<li><b>入力されたコンテンツ：</b>ルーンリーディング、名前診断、バインドルーンのために入力された意図・質問や名前のテキスト。</li>
+<li><b>利用データ（端末内）：</b>残りのトークン数、リーディング履歴（アーカイブ）、設定、VIPステータス。</li>
+<li><b>広告および端末データ：</b>リワード広告を視聴する際、Google AdMobが広告ID、IPアドレス、端末やアプリの情報などを処理する場合があります。</li>
+<li><b>購入情報：</b>VIPサブスクリプションはGoogle PlayまたはApple App Storeを通じて購入されます。当方はお客様の決済情報やカード情報にはアクセスせず、有効かどうかのみを確認します。</li>
+</ul>
+
+<h2>2. データの利用目的</h2>
+<ul>
+<li>アカウント登録、ログイン、および端末間でのプロフィール同期のため</li>
+<li>ルーンリーディング、名前診断、および解釈を生成するため</li>
+<li>トークン、広告、およびVIPサブスクリプションシステムを運営するため</li>
+<li>本アプリのセキュリティ確保および不具合修正のため</li>
+<li>法的義務を遵守するため</li>
+</ul>
+
+<h2>3. 人工知能（AI）の利用</h2>
+<p>ルーンの解釈はAIサービスを用いて生成されます。このため、お名前、生年月日、および質問テキストが<b>Groq</b>および/または<b>Google Gemini</b>に送信される場合があります。これらはリーディング生成のみを目的として送信されます。健康状態や金融情報などの機密情報、または第三者の個人情報を入力しないでください。</p>
+
+<h2>4. データの共有先</h2>
+<p>当方はお客様のデータを販売しません。サービス提供のため、以下のプロバイダーを利用します：</p>
+<ul>
+<li><b>Google Firebase</b>（認証およびFirestoreデータベース）</li>
+<li><b>Google AdMob</b>（リワード広告）</li>
+<li><b>Google Play / Apple App Store &amp; RevenueCat</b>（サブスクリプションおよび決済確認）</li>
+<li><b>Groq および Google Gemini</b>（AIリーディング生成）</li>
+</ul>
+
+<h2>5. 広告と同意</h2>
+<p>本アプリはリワード広告の表示にGoogle AdMobを使用します。対象地域では初回起動時に広告設定の同意画面が表示されます。iOSではトラッキング許可が求められる場合があります。端末の設定から広告のパーソナライズを制限することも可能です。</p>
+
+<h2>6. 保存期間およびお客様の権利</h2>
+<p>アカウントおよびプロフィールデータは、アカウントを削除するまで保持されます。お客様はご自身のデータへのアクセス、訂正、削除、処理の制限、および同意の撤回を行う権利を有します。ご希望の場合は <a href="mailto:runeyard@gmail.com">runeyard@gmail.com</a> までご連絡ください。</p>
+
+<h2>7. アカウントの削除</h2>
+<p>本アプリ内の<b>「プロフィール」→「アカウント削除」</b>から、アカウントとクラウド上のプロフィールを完全に削除できます。詳細は<a href="hesap-silme.html#ja">アカウント削除</a>ページをご覧ください。VIPサブスクリプションはストア側で別途解約する必要があります。</p>
+
+<h2>8. 未成年者およびセキュリティ</h2>
+<p>本アプリは<b>16歳未満の方</b>を対象としていません。当方はデータ保護のため合理的な技術的・組織的措置を講じています。お問い合わせ：<a href="mailto:runeyard@gmail.com">runeyard@gmail.com</a>。</p>
+<div class="kutu soluk">ルーン占いは娯楽および自己省察のみを目的としており、医療、法律、または財務上の助言ではありません。</div></div>
+
+<div lang="ko"><h1>개인정보 처리방침</h1><p class="soluk">최종 업데이트: 2026년 11월 2일</p>
+<p>본 방침은 <b>Rune Yard</b> 모바일 애플리케이션(이하 "앱")을 이용할 때 어떤 개인정보가 처리되는지, 그 이유와 귀하의 권리에 대해 설명합니다. 개인정보 보호책임자: <b>Mehmet Akdeniz</b> (연락처: <a href="mailto:runeyard@gmail.com">runeyard@gmail.com</a>).</p>
+
+<h2>1. 수집하는 개인정보 항목</h2>
+<ul>
+<li><b>계정 정보:</b> 이메일 주소 및 비밀번호(비밀번호는 Firebase Authentication에서 암호화하여 보관하며 당사는 볼 수 없음), 또는 Google / Apple 로그인 시 해당 제공업체가 전달하는 계정 식별자 및 이메일 주소.</li>
+<li><b>프로필 정보(선택):</b> 맞춤형 룬 해석을 위해 사용되는 이름(또는 닉네임) 및 생년월일.</li>
+<li><b>작성 콘텐츠:</b> 룬 리딩, 이름 분석 및 바인드룬을 위해 입력한 질문/의도 및 이름 텍스트.</li>
+<li><b>이용 데이터(기기 내 저장):</b> 남은 토큰 수, 리딩 기록(보관함), 설정 및 VIP 상태.</li>
+<li><b>광고 및 기기 데이터:</b> 보상형 광고 시청 시 Google AdMob이 광고 ID, IP 주소, 기기 및 앱 정보를 처리할 수 있습니다.</li>
+<li><b>구매 정보:</b> VIP 구독은 Google Play 또는 Apple App Store를 통해 결제됩니다. 당사는 귀하의 카드나 결제 정보에 접근하지 않으며 구독 활성화 여부만 확인합니다.</li>
+</ul>
+
+<h2>2. 개인정보의 이용 목적</h2>
+<ul>
+<li>회원 가입, 로그인 및 기기 간 프로필 동기화 제공</li>
+<li>룬 리딩, 이름 분석 및 해석 생성</li>
+<li>토큰, 광고 및 VIP 구독 시스템 운영</li>
+<li>앱 보안 유지 및 오류 수정</li>
+<li>법적 의무 이행</li>
+</ul>
+
+<h2>3. 인공지능(AI) 활용</h2>
+<p>룬 해석은 AI 서비스를 통해 생성됩니다. 이를 위해 귀하의 이름, 생년월일 및 질문 텍스트가 <b>Groq</b> 및/또는 <b>Google Gemini</b>로 전송될 수 있습니다. 이는 오직 리딩 생성을 위해서만 사용됩니다. 건강, 금융 등 민감한 정보나 타인의 개인정보를 입력하지 마십시오.</p>
+
+<h2>4. 개인정보의 제3자 제공 및 처리 위탁</h2>
+<p>당사는 귀하의 개인정보를 판매하지 않습니다. 서비스 제공을 위해 다음 서비스 제공업체를 이용합니다:</p>
+<ul>
+<li><b>Google Firebase</b> (인증 및 Firestore 데이터베이스)</li>
+<li><b>Google AdMob</b> (보상형 광고)</li>
+<li><b>Google Play / Apple App Store &amp; RevenueCat</b> (구독 및 결제 확인)</li>
+<li><b>Groq 및 Google Gemini</b> (AI 해석 생성)</li>
+</ul>
+
+<h2>5. 광고 및 동의</h2>
+<p>본 앱은 보상형 광고를 표시하기 위해 Google AdMob을 사용합니다. 해당 지역에서는 최초 실행 시 광고 동의 창이 표시되며 언제든 변경할 수 있습니다. iOS에서는 추적 권한을 요청할 수 있으며, 기기 설정에서 맞춤형 광고를 제한할 수 있습니다.</p>
+
+<h2>6. 보유 기간 및 귀하의 권리</h2>
+<p>계정 및 프로필 데이터는 계정을 삭제할 때까지 보관됩니다. 귀하는 언제든지 개인정보 열람, 정정, 삭제, 처리 정지 및 동의 철회를 요청할 권리가 있습니다. 문의: <a href="mailto:runeyard@gmail.com">runeyard@gmail.com</a>.</p>
+
+<h2>7. 계정 삭제</h2>
+<p>앱 내 <b>프로필 → 계정 삭제</b>를 통해 계정과 클라우드에 저장된 프로필을 영구적으로 삭제할 수 있습니다. 자세한 내용은 <a href="hesap-silme.html#ko">계정 삭제</a> 페이지를 참조하세요. VIP 구독은 스토어에서 별도로 해지해야 합니다.</p>
+
+<h2>8. 아동 및 보안</h2>
+<p>본 앱은 <b>만 16세 미만</b>을 대상으로 하지 않습니다. 당사는 데이터 보호를 위해 합리적인 기술적·관리적 조치를 취합니다. 문의: <a href="mailto:runeyard@gmail.com">runeyard@gmail.com</a>.</p>
+<div class="kutu soluk">룬 리딩은 오락 및 개인적 성찰을 위한 것이며, 의학적·법적·재정적 조언이 아닙니다.</div></div>
 </div><script>
 (function(){
-  var h=(location.hash||"").replace("#","");
-  var d=(h==="en"||h==="tr")?h:((navigator.language||"tr").toLowerCase().indexOf("tr")===0?"tr":"en");
-  function ayarla(x){document.body.className=x;document.documentElement.lang=x;
-    var b=document.querySelectorAll(".dil button");for(var i=0;i<b.length;i++){b[i].className=(b[i].getAttribute("data-d")===x)?"aktif":"";}
-    try{history.replaceState(null,"","#"+x);}catch(e){}}
+  var desteklenen=["tr","en","sv","de","es","no","fr","pt","ja","ko"];
+  var navMetin={
+    tr:["Gizlilik Politikası","Kullanım Şartları (EULA)","Hesap Silme"],
+    en:["Privacy Policy","Terms of Use (EULA)","Delete Account"],
+    sv:["Integritetspolicy","Användarvillkor (EULA)","Radera konto"],
+    de:["Datenschutzerklärung","Nutzungsbedingungen (EULA)","Konto löschen"],
+    es:["Política de Privacidad","Términos de Uso (EULA)","Eliminar cuenta"],
+    no:["Personvernerklæring","Bruksvilkår (EULA)","Slett konto"],
+    fr:["Politique de Confidentialité","Conditions d'Utilisation (EULA)","Supprimer le compte"],
+    pt:["Política de Privacidade","Termos de Uso (EULA)","Excluir conta"],
+    ja:["プライバシーポリシー","利用規約 (EULA)","アカウント削除"],
+    ko:["개인정보 처리방침","이용약관 (EULA)","계정 삭제"]
+  };
+  var h=(location.hash||"").replace("#","").toLowerCase();
+  var tarayici=(navigator.language||"en").toLowerCase();
+  var kisa=tarayici.split("-")[0];
+  if(kisa==="nb"||kisa==="nn") kisa="no";
+  var d=desteklenen.indexOf(h)!==-1?h:(desteklenen.indexOf(kisa)!==-1?kisa:"en");
+  function ayarla(x){
+    if(desteklenen.indexOf(x)===-1) x="en";
+    document.body.className=x;
+    document.documentElement.lang=x;
+    var b=document.querySelectorAll(".dil button");
+    for(var i=0;i<b.length;i++){
+      b[i].className=(b[i].getAttribute("data-d")===x)?"aktif":"";
+    }
+    var m=navMetin[x]||navMetin["en"];
+    var p=document.getElementById("nav-priv"),t=document.getElementById("nav-terms"),dl=document.getElementById("nav-del"),hm=document.getElementById("nav-home");
+    if(p){p.textContent=m[0];p.href="gizlilik.html#"+x;}
+    if(t){t.textContent=m[1];t.href="sartlar.html#"+x;}
+    if(dl){dl.textContent=m[2];dl.href="hesap-silme.html#"+x;}
+    if(hm){hm.href="index.html#"+x;}
+    try{history.replaceState(null,"","#"+x);}catch(e){}
+  }
   var b=document.querySelectorAll(".dil button");
-  for(var i=0;i<b.length;i++){b[i].onclick=function(){ayarla(this.getAttribute("data-d"));};}
+  for(var i=0;i<b.length;i++){
+    b[i].onclick=function(){ayarla(this.getAttribute("data-d"));};
+  }
   ayarla(d);
 })();
 </script></body></html>

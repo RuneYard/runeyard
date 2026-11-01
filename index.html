@@ -1,39 +1,85 @@
 <!doctype html>
 <html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Rune Yard · Rune Yard</title><style>
+<title>Rune Yard: Norse Rune Reading</title><style>
 :root{--bg:#0c0a07;--kart:#1a1710;--altin:#d4af37;--yazi:#e9e4d6;--soluk:#a39c88}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--yazi);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-.kap{max-width:760px;margin:0 auto;padding:24px 18px 60px}
-header{text-align:center;padding:28px 0 8px}
-.logo{color:var(--altin);font-weight:700;letter-spacing:6px;font-size:22px}
+.kap{max-width:780px;margin:0 auto;padding:24px 18px 60px}
+header{text-align:center;padding:24px 0 8px}
+.logo{color:var(--altin);font-weight:700;letter-spacing:6px;font-size:22px;text-decoration:none}
 h1{color:var(--altin);font-size:26px;margin:.6em 0 .2em}
 h2{color:var(--altin);font-size:19px;margin:1.8em 0 .4em;border-bottom:1px solid #3a331d;padding-bottom:.25em}
 p,li{color:var(--yazi)} .soluk{color:var(--soluk);font-size:14px}
-ul{padding-left:1.2em} li{margin:.25em 0}
+ul,ol{padding-left:1.3em} li{margin:.3em 0}
 a{color:var(--altin)}
-.dil{display:flex;gap:8px;justify-content:center;margin:14px 0}
-.dil button{background:var(--kart);color:var(--yazi);border:1px solid #4a4020;border-radius:8px;padding:8px 16px;cursor:pointer;font-size:15px}
+.dil{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:14px 0}
+.dil button{background:var(--kart);color:var(--yazi);border:1px solid #4a4020;border-radius:8px;padding:6px 12px;cursor:pointer;font-size:14px;transition:all .15s}
 .dil button.aktif{background:var(--altin);color:#000;font-weight:700}
 .kutu{background:var(--kart);border:1px solid #3a331d;border-radius:10px;padding:14px 16px;margin:14px 0}
-nav{text-align:center;margin:10px 0 0;font-size:15px} nav a{margin:0 10px}
-div[lang]{display:none} body.tr div[lang=tr]{display:block} body.en div[lang=en]{display:block}
+nav{text-align:center;margin:12px 0 18px;font-size:15px;display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+div[lang]{display:none}
+body.tr div[lang=tr],body.en div[lang=en],body.sv div[lang=sv],body.de div[lang=de],body.es div[lang=es],body.no div[lang=no],body.fr div[lang=fr],body.pt div[lang=pt],body.ja div[lang=ja],body.ko div[lang=ko]{display:block}
 </style></head>
 <body class="tr"><div class="kap">
-<header><div class="logo">RUNE YARD</div></header>
-<div class="dil"><button data-d="tr">Türkçe</button><button data-d="en">English</button></div>
-<nav><a href="gizlilik.html">Gizlilik / Privacy</a><a href="sartlar.html">Şartlar / Terms</a><a href="hesap-silme.html">Hesap silme / Delete account</a></nav>
-<div lang="tr"><h1>Rune Yard</h1><p>Rünlerin kadim bilgeliğiyle günlük rehberlik.</p><div class="kutu"><a href="gizlilik.html#tr">Gizlilik Politikası</a><br><a href="sartlar.html#tr">Kullanım Şartları</a><br><a href="hesap-silme.html#tr">Hesap Silme</a></div></div>
-<div lang="en"><h1>Rune Yard</h1><p>Daily guidance with the ancient wisdom of the runes.</p><div class="kutu"><a href="gizlilik.html#en">Privacy Policy</a><br><a href="sartlar.html#en">Terms of Use</a><br><a href="hesap-silme.html#en">Delete Account</a></div></div>
+<header><a class="logo" href="index.html" id="nav-home">RUNE YARD</a></header>
+<div class="dil">
+<button data-d="tr">Türkçe</button><button data-d="en">English</button><button data-d="sv">Svenska</button><button data-d="de">Deutsch</button><button data-d="es">Español</button><button data-d="no">Norsk</button><button data-d="fr">Français</button><button data-d="pt">Português</button><button data-d="ja">日本語</button><button data-d="ko">한국어</button>
+</div>
+<nav>
+  <a href="gizlilik.html" id="nav-priv">Gizlilik / Privacy</a>
+  <a href="sartlar.html" id="nav-terms">Şartlar / Terms (EULA)</a>
+  <a href="hesap-silme.html" id="nav-del">Hesap silme / Delete account</a>
+</nav>
+<div lang="tr"><h1>Rune Yard: Rün Okuma &amp; Bağlama</h1><p>Kadim Elder Futhark rünlerinin bilgeliğiyle günlük rehberlik, derin açılımlar, isim analizi ve kişisel bindrune mührü.</p><div class="kutu"><a href="gizlilik.html#tr">Gizlilik Politikası</a><br><a href="sartlar.html#tr">Kullanım Şartları (EULA)</a><br><a href="hesap-silme.html#tr">Hesap Silme</a></div></div>
+<div lang="en"><h1>Rune Yard: Norse Rune Reading</h1><p>Daily guidance, deep Elder Futhark spreads, name analysis, and custom bindrunes with the ancient wisdom of the runes.</p><div class="kutu"><a href="gizlilik.html#en">Privacy Policy</a><br><a href="sartlar.html#en">Terms of Use (EULA)</a><br><a href="hesap-silme.html#en">Delete Account</a></div></div>
+<div lang="sv"><h1>Rune Yard: Runläsning &amp; Orakel</h1><p>Daglig vägledning, djupa läggningar i den äldre futharken, namnanalys och personliga bindrunor.</p><div class="kutu"><a href="gizlilik.html#sv">Integritetspolicy</a><br><a href="sartlar.html#sv">Användarvillkor (EULA)</a><br><a href="hesap-silme.html#sv">Radera konto</a></div></div>
+<div lang="de"><h1>Rune Yard: Runenlesen &amp; Binden</h1><p>Tägliches Runenlesen, tiefe Legungen im Älteren Futhark, Namensanalyse und eigene Binderunen.</p><div class="kutu"><a href="gizlilik.html#de">Datenschutzerklärung</a><br><a href="sartlar.html#de">Nutzungsbedingungen (EULA)</a><br><a href="hesap-silme.html#de">Konto löschen</a></div></div>
+<div lang="es"><h1>Rune Yard: Lectura de Runas</h1><p>Lectura diaria de runas nórdicas, tiradas del Futhark Antiguo, análisis de nombres y bindrunes.</p><div class="kutu"><a href="gizlilik.html#es">Política de Privacidad</a><br><a href="sartlar.html#es">Términos de Uso (EULA)</a><br><a href="hesap-silme.html#es">Eliminar cuenta</a></div></div>
+<div lang="no"><h1>Rune Yard: Runelesing &amp; Orakel</h1><p>Daglig runelesing, dype legg i eldre futhark, navneanalyse og personlige bindruner.</p><div class="kutu"><a href="gizlilik.html#no">Personvernerklæring</a><br><a href="sartlar.html#no">Bruksvilkår (EULA)</a><br><a href="hesap-silme.html#no">Slett konto</a></div></div>
+<div lang="fr"><h1>Rune Yard : Tirage de Runes</h1><p>Tirage quotidien des runes nordiques, tirages de l'Ancien Futhark, analyse de nom et runes liées.</p><div class="kutu"><a href="gizlilik.html#fr">Politique de Confidentialité</a><br><a href="sartlar.html#fr">Conditions d'Utilisation (EULA)</a><br><a href="hesap-silme.html#fr">Supprimer le compte</a></div></div>
+<div lang="pt"><h1>Rune Yard: Leitura de Runas</h1><p>Leitura diária de runas nórdicas, tiragens do Elder Futhark, análise de nome e bindrunes.</p><div class="kutu"><a href="gizlilik.html#pt">Política de Privacidade</a><br><a href="sartlar.html#pt">Termos de Uso (EULA)</a><br><a href="hesap-silme.html#pt">Excluir conta</a></div></div>
+<div lang="ja"><h1>Rune Yard：北欧ルーン占い＆バインドルーン</h1><p>古代エルダー・フサルクによる毎日のルーン占い、本格スプレッド、名前診断、バインドルーン作成。</p><div class="kutu"><a href="gizlilik.html#ja">プライバシーポリシー</a><br><a href="sartlar.html#ja">利用規約 (EULA)</a><br><a href="hesap-silme.html#ja">アカウント削除</a></div></div>
+<div lang="ko"><h1>Rune Yard: 북유럽 룬 점술 &amp; 바인드룬</h1><p>고대 엘더 푸타르크를 통한 오늘의 룬 리딩, 심층 스프레드, 이름 분석 및 맞춤형 바인드룬 제작.</p><div class="kutu"><a href="gizlilik.html#ko">개인정보 처리방침</a><br><a href="sartlar.html#ko">이용약관 (EULA)</a><br><a href="hesap-silme.html#ko">계정 삭제</a></div></div>
 </div><script>
 (function(){
-  var h=(location.hash||"").replace("#","");
-  var d=(h==="en"||h==="tr")?h:((navigator.language||"tr").toLowerCase().indexOf("tr")===0?"tr":"en");
-  function ayarla(x){document.body.className=x;document.documentElement.lang=x;
-    var b=document.querySelectorAll(".dil button");for(var i=0;i<b.length;i++){b[i].className=(b[i].getAttribute("data-d")===x)?"aktif":"";}
-    try{history.replaceState(null,"","#"+x);}catch(e){}}
+  var desteklenen=["tr","en","sv","de","es","no","fr","pt","ja","ko"];
+  var navMetin={
+    tr:["Gizlilik Politikası","Kullanım Şartları (EULA)","Hesap Silme"],
+    en:["Privacy Policy","Terms of Use (EULA)","Delete Account"],
+    sv:["Integritetspolicy","Användarvillkor (EULA)","Radera konto"],
+    de:["Datenschutzerklärung","Nutzungsbedingungen (EULA)","Konto löschen"],
+    es:["Política de Privacidad","Términos de Uso (EULA)","Eliminar cuenta"],
+    no:["Personvernerklæring","Bruksvilkår (EULA)","Slett konto"],
+    fr:["Politique de Confidentialité","Conditions d'Utilisation (EULA)","Supprimer le compte"],
+    pt:["Política de Privacidade","Termos de Uso (EULA)","Excluir conta"],
+    ja:["プライバシーポリシー","利用規約 (EULA)","アカウント削除"],
+    ko:["개인정보 처리방침","이용약관 (EULA)","계정 삭제"]
+  };
+  var h=(location.hash||"").replace("#","").toLowerCase();
+  var tarayici=(navigator.language||"en").toLowerCase();
+  var kisa=tarayici.split("-")[0];
+  if(kisa==="nb"||kisa==="nn") kisa="no";
+  var d=desteklenen.indexOf(h)!==-1?h:(desteklenen.indexOf(kisa)!==-1?kisa:"en");
+  function ayarla(x){
+    if(desteklenen.indexOf(x)===-1) x="en";
+    document.body.className=x;
+    document.documentElement.lang=x;
+    var b=document.querySelectorAll(".dil button");
+    for(var i=0;i<b.length;i++){
+      b[i].className=(b[i].getAttribute("data-d")===x)?"aktif":"";
+    }
+    var m=navMetin[x]||navMetin["en"];
+    var p=document.getElementById("nav-priv"),t=document.getElementById("nav-terms"),dl=document.getElementById("nav-del"),hm=document.getElementById("nav-home");
+    if(p){p.textContent=m[0];p.href="gizlilik.html#"+x;}
+    if(t){t.textContent=m[1];t.href="sartlar.html#"+x;}
+    if(dl){dl.textContent=m[2];dl.href="hesap-silme.html#"+x;}
+    if(hm){hm.href="index.html#"+x;}
+    try{history.replaceState(null,"","#"+x);}catch(e){}
+  }
   var b=document.querySelectorAll(".dil button");
-  for(var i=0;i<b.length;i++){b[i].onclick=function(){ayarla(this.getAttribute("data-d"));};}
+  for(var i=0;i<b.length;i++){
+    b[i].onclick=function(){ayarla(this.getAttribute("data-d"));};
+  }
   ayarla(d);
 })();
 </script></body></html>

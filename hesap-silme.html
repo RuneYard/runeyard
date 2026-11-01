@@ -4,68 +4,151 @@
 :root{--bg:#0c0a07;--kart:#1a1710;--altin:#d4af37;--yazi:#e9e4d6;--soluk:#a39c88}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--yazi);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-.kap{max-width:760px;margin:0 auto;padding:24px 18px 60px}
-header{text-align:center;padding:28px 0 8px}
-.logo{color:var(--altin);font-weight:700;letter-spacing:6px;font-size:22px}
+.kap{max-width:780px;margin:0 auto;padding:24px 18px 60px}
+header{text-align:center;padding:24px 0 8px}
+.logo{color:var(--altin);font-weight:700;letter-spacing:6px;font-size:22px;text-decoration:none}
 h1{color:var(--altin);font-size:26px;margin:.6em 0 .2em}
 h2{color:var(--altin);font-size:19px;margin:1.8em 0 .4em;border-bottom:1px solid #3a331d;padding-bottom:.25em}
 p,li{color:var(--yazi)} .soluk{color:var(--soluk);font-size:14px}
-ul{padding-left:1.2em} li{margin:.25em 0}
+ul,ol{padding-left:1.3em} li{margin:.3em 0}
 a{color:var(--altin)}
-.dil{display:flex;gap:8px;justify-content:center;margin:14px 0}
-.dil button{background:var(--kart);color:var(--yazi);border:1px solid #4a4020;border-radius:8px;padding:8px 16px;cursor:pointer;font-size:15px}
+.dil{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:14px 0}
+.dil button{background:var(--kart);color:var(--yazi);border:1px solid #4a4020;border-radius:8px;padding:6px 12px;cursor:pointer;font-size:14px;transition:all .15s}
 .dil button.aktif{background:var(--altin);color:#000;font-weight:700}
 .kutu{background:var(--kart);border:1px solid #3a331d;border-radius:10px;padding:14px 16px;margin:14px 0}
-nav{text-align:center;margin:10px 0 0;font-size:15px} nav a{margin:0 10px}
-div[lang]{display:none} body.tr div[lang=tr]{display:block} body.en div[lang=en]{display:block}
+nav{text-align:center;margin:12px 0 18px;font-size:15px;display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+div[lang]{display:none}
+body.tr div[lang=tr],body.en div[lang=en],body.sv div[lang=sv],body.de div[lang=de],body.es div[lang=es],body.no div[lang=no],body.fr div[lang=fr],body.pt div[lang=pt],body.ja div[lang=ja],body.ko div[lang=ko]{display:block}
 </style></head>
 <body class="tr"><div class="kap">
-<header><div class="logo">RUNE YARD</div></header>
-<div class="dil"><button data-d="tr">Türkçe</button><button data-d="en">English</button></div>
-<nav><a href="gizlilik.html">Gizlilik / Privacy</a><a href="sartlar.html">Şartlar / Terms</a><a href="hesap-silme.html">Hesap silme / Delete account</a></nav>
-<div lang="tr"><h1>Hesap Silme</h1><p class="soluk">Son güncelleme: 30 Eylül 2026</p>
+<header><a class="logo" href="index.html" id="nav-home">RUNE YARD</a></header>
+<div class="dil">
+<button data-d="tr">Türkçe</button><button data-d="en">English</button><button data-d="sv">Svenska</button><button data-d="de">Deutsch</button><button data-d="es">Español</button><button data-d="no">Norsk</button><button data-d="fr">Français</button><button data-d="pt">Português</button><button data-d="ja">日本語</button><button data-d="ko">한국어</button>
+</div>
+<nav>
+  <a href="gizlilik.html" id="nav-priv">Gizlilik / Privacy</a>
+  <a href="sartlar.html" id="nav-terms">Şartlar / Terms (EULA)</a>
+  <a href="hesap-silme.html" id="nav-del">Hesap silme / Delete account</a>
+</nav>
+<div lang="tr"><h1>Hesap Silme</h1><p class="soluk">Son güncelleme: 2 Kasım 2026</p>
 <p>Rune Yard hesabınızı ve ilişkili verilerinizi silmek için aşağıdaki yollardan birini kullanabilirsiniz.</p>
 <h2>Uygulama içinden (önerilen)</h2>
 <ol>
 <li>Uygulamayı açın ve <b>Profil</b> sekmesine gidin.</li>
-<li><b>Abonelikten Çık</b> düğmesine dokunun.</li>
+<li><b>Abonelikten Çık (Hesabı Sil)</b> düğmesine dokunun.</li>
 <li>E-posta hesabı için şifrenizi girin; Google/Apple hesabı için ilgili hesapla yeniden giriş yapın ve onaylayın.</li>
 </ol>
 <p>Bu işlem hesabınızı ve bulutta saklanan profilinizi (ad, doğum tarihi, e-posta ve ilişkili kayıtlar) kalıcı olarak siler. Cihazdaki yerel veriler, uygulamayı kaldırdığınızda silinir.</p>
 <h2>E-posta ile</h2>
-<p>Uygulamaya erişemiyorsanız, hesabınızda kayıtlı e-posta adresinizden <a href="mailto:runeyard@gmail.com?subject=Hesap%20silme%20talebi">runeyard@gmail.com</a> adresine "Hesap silme talebi" konulu bir e-posta gönderin. Talebinizi makul bir süre içinde (en geç 30 gün) işleme alırız.</p>
+<p>Uygulamaya erişemiyorsanız, hesabınızda kayıtlı e-posta adresinizden <a href="mailto:runeyard@gmail.com?subject=Hesap%20silme%20talebi">runeyard@gmail.com</a> adresine "Hesap silme talebi" konulu bir e-posta gönderin. Talebinizi en geç 30 gün içinde işleme alırız.</p>
 <h2>Önemli</h2>
 <ul>
 <li>Silme işlemi geri alınamaz.</li>
 <li><b>VIP aboneliği</b> hesabı silmekle iptal olmaz; Google Play veya App Store'dan ayrıca iptal edin.</li>
 <li>Mağazaların tuttuğu ödeme kayıtları, kendi politikalarına göre saklanabilir.</li>
 </ul></div>
-<div lang="en"><h1>Delete Your Account</h1><p class="soluk">Last updated: 30 September 2026</p>
+
+<div lang="en"><h1>Delete Your Account</h1><p class="soluk">Last updated: 2 November 2026</p>
 <p>You can delete your Rune Yard account and the associated data in either of the following ways.</p>
 <h2>In the App (recommended)</h2>
 <ol>
 <li>Open the App and go to the <b>Profile</b> tab.</li>
-<li>Tap <b>"Abonelikten Çık"</b> (Delete account).</li>
+<li>Tap <b>Delete account ("Abonelikten Çık")</b>.</li>
 <li>For an e-mail account, enter your password; for a Google/Apple account, sign in again with that account and confirm.</li>
 </ol>
 <p>This permanently deletes your account and your cloud-stored profile (name, date of birth, e-mail and related records). Local data on your device is removed when you uninstall the App.</p>
 <h2>By e-mail</h2>
-<p>If you cannot access the App, send an e-mail titled "Account deletion request" from the address registered to your account to <a href="mailto:runeyard@gmail.com?subject=Account%20deletion%20request">runeyard@gmail.com</a>. We will process your request within a reasonable time (at most 30 days).</p>
+<p>If you cannot access the App, send an e-mail titled "Account deletion request" from the address registered to your account to <a href="mailto:runeyard@gmail.com?subject=Account%20deletion%20request">runeyard@gmail.com</a>. We will process your request within 30 days.</p>
 <h2>Important</h2>
 <ul>
 <li>Deletion cannot be undone.</li>
 <li>Your <b>VIP subscription</b> is not cancelled by deleting your account; cancel it separately in Google Play or the App Store.</li>
 <li>Payment records kept by the stores may be retained under their own policies.</li>
 </ul></div>
+
+<div lang="sv"><h1>Radera ditt konto</h1><p class="soluk">Senast uppdaterad: 2 november 2026</p>
+<p>Du kan radera ditt Rune Yard-konto och tillhörande uppgifter på något av följande sätt.</p>
+<h2>I Appen (rekommenderas)</h2>
+<ol>
+<li>Öppna Appen och gå till fliken <b>Profil</b>.</li>
+<li>Tryck på <b>Radera konto</b>.</li>
+<li>Bekräfta med ditt lösenord eller genom att logga in igen med Google/Apple.</li>
+</ol>
+<p>Detta raderar permanent ditt konto och din molnlagrade profil. Via e-post kan du även skicka en begäran till <a href="mailto:runeyard@gmail.com">runeyard@gmail.com</a>. Obs! En aktiv <b>VIP-prenumeration</b> måste sägas upp separat i Google Play eller App Store.</p></div>
+
+<div lang="de"><h1>Konto löschen</h1><p class="soluk">Zuletzt aktualisiert: 2. November 2026</p>
+<p>Sie können Ihr Rune Yard-Konto und die zugehörigen Daten wie folgt löschen:</p>
+<h2>In der App (empfohlen)</h2>
+<ol>
+<li>Öffnen Sie die App und wechseln Sie zum Reiter <b>Profil</b>.</li>
+<li>Tippen Sie auf <b>Konto löschen</b>.</li>
+<li>Bestätigen Sie den Vorgang mit Ihrem Passwort bzw. durch erneute Anmeldung über Google/Apple.</li>
+</ol>
+<p>Dadurch werden Ihr Konto und Ihr Cloud-Profil dauerhaft gelöscht. Alternativ können Sie eine E-Mail an <a href="mailto:runeyard@gmail.com">runeyard@gmail.com</a> senden. Wichtig: Ein <b>VIP-Abonnement</b> muss separat im Google Play Store oder App Store gekündigt werden.</p></div>
+
+<div lang="es"><h1>Eliminar tu cuenta</h1><p class="soluk">Última actualización: 2 de noviembre de 2026</p>
+<p>Puedes eliminar tu cuenta de Rune Yard y los datos asociados de las siguientes formas:</p>
+<h2>Desde la Aplicación (recomendado)</h2>
+<ol>
+<li>Abre la Aplicación y ve a la pestaña <b>Perfil</b>.</li>
+<li>Toca <b>Eliminar cuenta</b> y confirma tu identidad.</li>
+</ol>
+<p>Esto elimina permanentemente tu cuenta y perfil en la nube. También puedes solicitarlo por correo a <a href="mailto:runeyard@gmail.com">runeyard@gmail.com</a>. Nota: Tu <b>suscripción VIP</b> debe cancelarse por separado en Google Play o App Store.</p></div>
+
+<div lang="no"><h1>Slett kontoen din</h1><p class="soluk">Sist oppdatert: 2. november 2026</p>
+<p>Du kan slette Rune Yard-kontoen din og tilknyttede data direkte i Appen under <b>Profil → Slett konto</b>, eller ved å sende en e-post til <a href="mailto:runeyard@gmail.com">runeyard@gmail.com</a>. Dette sletter kontoen og skyprofilen din permanent. Husk at et aktivt <b>VIP-abonnement</b> må sies opp separat i Google Play eller App Store.</p></div>
+
+<div lang="fr"><h1>Supprimer votre compte</h1><p class="soluk">Dernière mise à jour : 2 novembre 2026</p>
+<p>Vous pouvez supprimer définitivement votre compte Rune Yard et vos données associées directement dans l'Application via <b>Profil → Supprimer le compte</b>, ou en écrivant à <a href="mailto:runeyard@gmail.com">runeyard@gmail.com</a>. Attention : votre <b>abonnement VIP</b> doit être résilié séparément sur Google Play ou l'App Store.</p></div>
+
+<div lang="pt"><h1>Excluir sua conta</h1><p class="soluk">Última atualização: 2 de novembro de 2026</p>
+<p>Você pode excluir permanentemente sua conta do Rune Yard e os dados associados diretamente no Aplicativo em <b>Perfil → Excluir conta</b>, ou enviando um e-mail para <a href="mailto:runeyard@gmail.com">runeyard@gmail.com</a>. Importante: sua <b>assinatura VIP</b> deve ser cancelada separadamente no Google Play ou na App Store.</p></div>
+
+<div lang="ja"><h1>アカウント削除</h1><p class="soluk">最終更新日：2026年11月2日</p>
+<p>Rune Yardのアカウントおよび関連データは、アプリ内の<b>「プロフィール」→「アカウント削除」</b>からいつでも完全に削除できます。アプリにアクセスできない場合は、登録メールアドレスから <a href="mailto:runeyard@gmail.com">runeyard@gmail.com</a> までご連絡ください。※<b>VIPサブスクリプション</b>はGoogle PlayまたはApp Storeで別途解約する必要があります。</p></div>
+
+<div lang="ko"><h1>계정 삭제</h1><p class="soluk">최종 업데이트: 2026년 11월 2일</p>
+<p>Rune Yard 계정 및 관련 데이터는 앱 내 <b>프로필 → 계정 삭제</b>에서 즉시 영구 삭제할 수 있습니다. 앱에 접속할 수 없는 경우 가입된 이메일 주소에서 <a href="mailto:runeyard@gmail.com">runeyard@gmail.com</a>으로 삭제 요청을 보내주시면 30일 이내에 처리해 드립니다. 참고: <b>VIP 구독</b>은 Google Play 또는 App Store에서 별도로 해지해야 합니다.</p></div>
 </div><script>
 (function(){
-  var h=(location.hash||"").replace("#","");
-  var d=(h==="en"||h==="tr")?h:((navigator.language||"tr").toLowerCase().indexOf("tr")===0?"tr":"en");
-  function ayarla(x){document.body.className=x;document.documentElement.lang=x;
-    var b=document.querySelectorAll(".dil button");for(var i=0;i<b.length;i++){b[i].className=(b[i].getAttribute("data-d")===x)?"aktif":"";}
-    try{history.replaceState(null,"","#"+x);}catch(e){}}
+  var desteklenen=["tr","en","sv","de","es","no","fr","pt","ja","ko"];
+  var navMetin={
+    tr:["Gizlilik Politikası","Kullanım Şartları (EULA)","Hesap Silme"],
+    en:["Privacy Policy","Terms of Use (EULA)","Delete Account"],
+    sv:["Integritetspolicy","Användarvillkor (EULA)","Radera konto"],
+    de:["Datenschutzerklärung","Nutzungsbedingungen (EULA)","Konto löschen"],
+    es:["Política de Privacidad","Términos de Uso (EULA)","Eliminar cuenta"],
+    no:["Personvernerklæring","Bruksvilkår (EULA)","Slett konto"],
+    fr:["Politique de Confidentialité","Conditions d'Utilisation (EULA)","Supprimer le compte"],
+    pt:["Política de Privacidade","Termos de Uso (EULA)","Excluir conta"],
+    ja:["プライバシーポリシー","利用規約 (EULA)","アカウント削除"],
+    ko:["개인정보 처리방침","이용약관 (EULA)","계정 삭제"]
+  };
+  var h=(location.hash||"").replace("#","").toLowerCase();
+  var tarayici=(navigator.language||"en").toLowerCase();
+  var kisa=tarayici.split("-")[0];
+  if(kisa==="nb"||kisa==="nn") kisa="no";
+  var d=desteklenen.indexOf(h)!==-1?h:(desteklenen.indexOf(kisa)!==-1?kisa:"en");
+  function ayarla(x){
+    if(desteklenen.indexOf(x)===-1) x="en";
+    document.body.className=x;
+    document.documentElement.lang=x;
+    var b=document.querySelectorAll(".dil button");
+    for(var i=0;i<b.length;i++){
+      b[i].className=(b[i].getAttribute("data-d")===x)?"aktif":"";
+    }
+    var m=navMetin[x]||navMetin["en"];
+    var p=document.getElementById("nav-priv"),t=document.getElementById("nav-terms"),dl=document.getElementById("nav-del"),hm=document.getElementById("nav-home");
+    if(p){p.textContent=m[0];p.href="gizlilik.html#"+x;}
+    if(t){t.textContent=m[1];t.href="sartlar.html#"+x;}
+    if(dl){dl.textContent=m[2];dl.href="hesap-silme.html#"+x;}
+    if(hm){hm.href="index.html#"+x;}
+    try{history.replaceState(null,"","#"+x);}catch(e){}
+  }
   var b=document.querySelectorAll(".dil button");
-  for(var i=0;i<b.length;i++){b[i].onclick=function(){ayarla(this.getAttribute("data-d"));};}
+  for(var i=0;i<b.length;i++){
+    b[i].onclick=function(){ayarla(this.getAttribute("data-d"));};
+  }
   ayarla(d);
 })();
 </script></body></html>
